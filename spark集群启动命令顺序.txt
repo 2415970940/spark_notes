@@ -1,0 +1,13 @@
+start-dfs.sh
+start-yarn.sh
+
+zkServer.sh start(每台)
+
+nohup bin/kafka-server-start.sh config/server.properties &（每台，必须在/usr/local/kafka下执行）
+
+./start-all.sh （/usr/local/spark/sbin下执行）
+
+重点
+表现形式—— 						（传入参数）=>{方法体}
+函数作为参数的表现形式——		函数名:传入参数=>返回值
+reduce(f: (T, T) ⇒ T): T  官网给出的说明。意思是参数是一个函数。函数的参数是一个int对，返回值是一个int
